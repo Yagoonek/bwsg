@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Boty w stumble guys</title>
+    <style>
+        /* Dodaj odpowiednie style, jak wcześniej */
+    </style>
+</head>
+<body>
+    <!-- Formularz logowania -->
+    <div class="login-form">
+        <h2>Logowanie</h2>
+        <form action="login.php" method="post">
+            <label for="username">Użytkownik:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Hasło:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Zaloguj</button>
+        </form>
+    </div>
+
+    <!-- Formularz wylogowania -->
+    <div class="logout-form">
+        <form action="logout.php" method="post">
+            <button type="submit">Wyloguj</button>
+        </form>
+    </div>
+
+    <!-- Formularz dodawania posta -->
+    <div class="new-post">
+        <form action="add_post.php" method="post">
+            <textarea name="content" placeholder="Napisz nowy post..."></textarea>
+            <button type="submit">Wyślij</button>
+        </form>
+    </div>
+
+    <!-- Lista postów -->
+    <div class="posts">
+        <?php include 'display_posts.php'; ?>
+    </div>
+</body>
+</html>
